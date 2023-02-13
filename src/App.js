@@ -22,7 +22,7 @@ function Board({ xIsNext, squares, onPlay }) {
     }
     onPlay(nextSquares);
   }
-
+  // ICI, je verifie s'il y a un gagnant
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
@@ -52,7 +52,7 @@ function Board({ xIsNext, squares, onPlay }) {
     </>
   );
 }
-
+// Affichage de la liste  des tours passés(history)et afficher l'état du jeu
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
@@ -95,8 +95,7 @@ export default function Game() {
   );
 }
 
-// ----Déclaration d'un Vainqueur
-
+//  Déclaration d'un vaiqueur
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
@@ -257,30 +256,5 @@ function calculateWinner(squares) {
 //   //     )
 //   //   );
 //   // }
-//   // class Element extends React.Component {
-//   //   constructor(props) {
-//   //     super(props);
-//   //     this.state = {
-//   //       src: props.src,
-//   //     };
-//   //   }
-//   //   componentDidMount() {
-//   //     fetchSrc().then((src) => this.setState({ src }));
-//   //   }
-//   //   render() {
-//   //     return (
-//   //       <div>
-//   //         <img id="myImg" src={this.state.src} />
-//   //       </div>
-//   //     );
-//   //   }
-//   // }
-//   // return (
-//   //   <div>
-//   //     <h1> Hallo!</h1>
-//   //     {/* <MakeImg /> */}
-//   //     <Element src="https://thumbs.gfycat.com/HugeDeliciousArchaeocete-max-1mb.gif"></Element>
-//   //   </div>
-//   // );
 
 // export default App;
