@@ -60,7 +60,7 @@ export default function Game() {
   const currentSquares = history[currentMove];
 
   function handlePlay(nextSquares) {
-    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares]; // Copy the array(création  d'une nouvelle copie du tableau)
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
   }
